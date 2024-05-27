@@ -89,12 +89,12 @@ function App() {
                 <button type="submit">Post</button>
             </form>
             <div>
-                <h2>Users:</h2>
+                <h2>Posts:</h2>
                 {allData.map((user, index) => (
                     <div key={index} style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
                       {editingId !== user.id ? (
                         <>
-                        <h3>{user.name} {user.text}</h3>
+                    {`${user.name}: ${user.text}`}
                     <button onClick={() => handleEdit(user)}>Edit</button>
                     <button onClick={() => handleDelete(user.id)}>Delete</button>
                         </>
